@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<button id="1">剪刀</button>
+			<button id="2">石头</button>
+			<button id="3">布</button>
+		</div>
+		<div id="4"></div>
+		<div id="5"></div>
+	</body>
+	<script>
+		var s=0
+		var btn1=document.getElementById("1");
+		var btn2=document.getElementById("2");
+		var btn3=document.getElementById("3");
+		var string =[btn1.innerHTML,btn2.innerHTML,btn3.innerHTML];
+		
+		btn1.addEventListener("click",function con1(){
+			 vlue=string[Math.floor(Math.random()*string.length)];
+			document.getElementById("4").innerHTML="电脑出"+vlue;
+			if(vlue==btn1.innerHTML){
+				document.getElementById("5").innerHTML="平手";
+			}else if(vlue==btn2.innerHTML){
+				document.getElementById("5").innerHTML="输了";
+			}else if(vlue==btn3.innerHTML){
+				document.getElementById("5").innerHTML="赢了";
+			}
+		})
+		btn2.addEventListener("click",function con2(){
+			 vlue=string[Math.floor(Math.random()*string.length)];
+			document.getElementById("4").innerHTML="电脑出"+vlue;
+			if(vlue==btn1.innerHTML){
+				document.getElementById("5").innerHTML="赢了";
+			}else if(vlue==btn2.innerHTML){
+				document.getElementById("5").innerHTML="平手";
+			}else if(vlue==btn3.innerHTML){
+				document.getElementById("5").innerHTML="输了";
+			}
+		})
+			btn3.addEventListener("click",function con3(){
+			 vlue=string[Math.floor(Math.random()*string.length)];
+			document.getElementById("4").innerHTML="电脑出"+vlue;
+			if(vlue==btn1.innerHTML){
+				document.getElementById("5").innerHTML="输了";
+			}else if(vlue==btn2.innerHTML){
+				document.getElementById("5").innerHTML="赢了";
+			}else if(vlue==btn3.innerHTML){
+				document.getElementById("5").innerHTML="平手";
+			}
+		})
+	</script>
+</html>
+
