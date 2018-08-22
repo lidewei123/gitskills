@@ -12,9 +12,10 @@
 		</div>
 		<div id="4"></div>
 		<div id="5"></div>
+		<div id="6"></div>
 	</body>
 	<script>
-		var s=0
+		var s=0;
 		var btn1=document.getElementById("1");
 		var btn2=document.getElementById("2");
 		var btn3=document.getElementById("3");
@@ -29,6 +30,8 @@
 				document.getElementById("5").innerHTML="输了";
 			}else if(vlue==btn3.innerHTML){
 				document.getElementById("5").innerHTML="赢了";
+				s++;
+				document.getElementById("6").innerHTML="你赢了"+s+"次";
 			}
 		})
 		btn2.addEventListener("click",function con2(){
@@ -36,6 +39,8 @@
 			document.getElementById("4").innerHTML="电脑出"+vlue;
 			if(vlue==btn1.innerHTML){
 				document.getElementById("5").innerHTML="赢了";
+				s++;
+				document.getElementById("6").innerHTML="你赢了"+s+"次";
 			}else if(vlue==btn2.innerHTML){
 				document.getElementById("5").innerHTML="平手";
 			}else if(vlue==btn3.innerHTML){
@@ -49,10 +54,13 @@
 				document.getElementById("5").innerHTML="输了";
 			}else if(vlue==btn2.innerHTML){
 				document.getElementById("5").innerHTML="赢了";
+				s++;
+				document.getElementById("6").innerHTML="你赢了"+s+"次";
 			}else if(vlue==btn3.innerHTML){
 				document.getElementById("5").innerHTML="平手";
 			}
 		})
+			document.getElementById("6").innerHTML="你赢了"+s+"次";
+			
 	</script>
 </html>
-
