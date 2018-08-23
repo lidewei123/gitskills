@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<button id="scissors" onclick="randomSelection1(this)">剪刀</button>
+			<button id="stone"  onclick="randomSelection1(this)">石头</button>
+			<button id="cloth" onclick="randomSelection1(this)">布</button>
+		</div>
+		<div id="computerOut"></div>
+		<div id="decideToWin"></div>
+		<div id="winCountNumber"></div>
+	</body>
+	<script>
+		var winCount=0;
+		var btn1=document.getElementById("scissors");
+		var btn2=document.getElementById("stone");
+		var btn3=document.getElementById("cloth");
+		var string =[btn1.innerHTML,btn2.innerHTML,btn3.innerHTML];
+		function randomSelection1(element){
+			 vlue=string[Math.floor(Math.random()*string.length)];
+			document.getElementById("computerOut").innerHTML="电脑出"+vlue;
+		if((vlue===btn1.innerHTML&& element.id=="ston")||(vlue==btn2.innerHTML&&element.id=="cloth")||
+		(vlue==btn3.innerHTML&& element.id=="scissors")){
+			document.getElementById("decideToWin").innerHTML="你赢了";
+			winCount++;
+			document.getElementById("winCountNumber").innerHTML="赢了"+winCount+"次";
+		}else if(vlue===element.innerHTML){
+			document.getElementById("decideToWin").innerHTML="平手";
+		}else{
+			document.getElementById("decideToWin").innerHTML="输了";
+		}
+		}		
+	</script>
+
